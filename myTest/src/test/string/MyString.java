@@ -189,7 +189,7 @@ public class MyString {
 	
 	/**
 	 * 模式匹配算法二
-	 * @param 
+	 * @param
 	 * @return
 	 */
 	public int indexOf_KMPB(MyString subStr,int start){
