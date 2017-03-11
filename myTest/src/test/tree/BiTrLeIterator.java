@@ -45,3 +45,9 @@ public class BiTrLeIterator extends BiTreeInterator{
         }else iteComplete = 1;
     }
 }
+
+
+/**
+ * 线索二叉树,可以从前向后,也可以从后向前遍历二叉树
+ * 在结点类中增加一个指向前驱结点和后驱结点的域(指针域)
+ */
