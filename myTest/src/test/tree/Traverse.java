@@ -1,6 +1,7 @@
 package test.tree;
 
 import test.queue.LinQueue;
+import test.stack.LinStack;
 
 /**
  * Created by Administrator on 2017/3/9 0009.
@@ -105,11 +106,11 @@ public class Traverse {
         System.out.println();
 
         System.out.println("中序遍历结点序列为:");
-        Traverse.inOrder(root1,vs);
+        Traverse.inOrder(root1, vs);
         System.out.println();
 
         System.out.println("后序遍历结点序列为:");
-        Traverse.postOrder(root1,vs);
+        Traverse.postOrder(root1, vs);
         System.out.println();
 
         System.out.print("层序遍历结点序列为:");
@@ -121,10 +122,23 @@ public class Traverse {
         System.out.println();
         temp = search(root1,new Character('C'));
         if (temp!=null)
-            System.out.println("查找到的结点数据值为:"+temp.data);
+            System.out.println("查找到的结点数据值为:" + temp.data);
         else
             System.out.println("查找失败");
     }
     //非递归的二叉树前序遍历算法,设计借助堆栈的循环结构算法
-
+    public static void preOrderNoRecur(BiTreeNode root)throws Exception{
+        LinStack s = new LinStack();
+        if (root == null)return;
+            BiTreeNode curr;
+            s.push(root);
+        while (s.notEmpty()){
+            curr = (BiTreeNode)s.pop();
+            System.out.print(""+curr.data);
+            if (curr.getRight()!=null)
+                s.push(curr.getRight());
+            if (curr.getLeft()!=null)
+                s.push(curr.getLeft());
+        }
+    }
 }
