@@ -4,7 +4,7 @@ package test.array;
 public class SeqList{
 	final int defaultSize = 0;
 	int maxSize;
-	int size;
+	public int size;
 	Object[]listArray;
 	public SeqList(){
 		initiate(defaultSize);
